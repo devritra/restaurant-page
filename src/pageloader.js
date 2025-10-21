@@ -7,7 +7,7 @@ export function pageLoad(){
     contentTitle.textContent = "Welcome to my Restaurent site";
     contentDescription.textContent = "It's a practice restaurent page";
 
-    heroSection.classList.add(".hero_section");
+    heroSection.classList.add("hero_section");
     heroSection.appendChild(contentTitle);
     heroSection.appendChild(contentDescription);
     contentDiv.appendChild(heroSection);
