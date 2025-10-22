@@ -10,8 +10,9 @@
     "takeChangesToGhPages": "git checkout gh-pages && git merge main --no-edit",
     "addAndCommitToGhPages": "git add dist -f && git commit -m 'Deployment commit'",
     "beforeTasks": "npm run takeChangesToGhPages && npm run build && npm run addAndCommitToGhPages",
+    "middleTask": "git subtree push --prefix dist origin gh-pages",
     "afterTasks": "git checkout main",
-    "deployToGhPages": "npm run beforeTasks && git subtree push --prefix dist origin gh-pages && npm run afterTasks"
+    "deployToGhPages": "npm run beforeTasks && npm run middleTask && npm run afterTasks"
   },
   "repository": {
     "type": "git",
